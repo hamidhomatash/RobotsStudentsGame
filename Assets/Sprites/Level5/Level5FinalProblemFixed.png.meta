@@ -1,0 +1,121 @@
+fileFormatVersion: 2
+guid: cdbb3a5ed4ee8394cb01b96e071a33e1
+timeCreated: 1522728123
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Level5FinalProblemFixed_0
+    21300002: Level5FinalProblemFixed_1
+    21300004: Level5FinalProblemFixed_2
+    21300006: Level5FinalProblemFixed_3
+    21300008: Level5FinalProblemFixed_4
+    21300010: Level5FinalProblemFixed_5
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Level5FinalProblemFixed_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 36
+        width: 117
+        height: 174
+      alignment: 9
+      pivot: {x: .720096886, y: .13522698}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Level5FinalProblemFixed_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 39
+        width: 130
+        height: 152
+      alignment: 9
+      pivot: {x: .63062495, y: .134678259}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Level5FinalProblemFixed_2
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 44
+        width: 121
+        height: 140
+      alignment: 9
+      pivot: {x: .671716094, y: .112138696}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Level5FinalProblemFixed_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 50
+        width: 147
+        height: 140
+      alignment: 9
+      pivot: {x: .56665498, y: .0683375746}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Level5FinalProblemFixed_4
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 50
+        width: 147
+        height: 156
+      alignment: 9
+      pivot: {x: .662073672, y: .0617635921}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Level5FinalProblemFixed_5
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 39
+        width: 215
+        height: 193
+      alignment: 9
+      pivot: {x: .550267994, y: .106751122}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

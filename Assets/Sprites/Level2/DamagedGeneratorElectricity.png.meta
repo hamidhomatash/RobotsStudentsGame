@@ -1,0 +1,143 @@
+fileFormatVersion: 2
+guid: 8b130c5b8fae0c846a50bf03a0d91155
+timeCreated: 1519176435
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: DamagedGeneratorElectricity_0
+    21300002: DamagedGeneratorElectricity_1
+    21300004: DamagedGeneratorElectricity_2
+    21300006: DamagedGeneratorElectricity_3
+    21300008: DamagedGeneratorElectricity_4
+    21300010: DamagedGeneratorElectricity_5
+    21300012: DamagedGeneratorElectricity_6
+    21300014: DamagedGeneratorElectricity_7
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: DamagedGeneratorElectricity_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 10
+        width: 91
+        height: 173
+      alignment: 9
+      pivot: {x: .00549427513, y: .291329563}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DamagedGeneratorElectricity_1
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 10
+        width: 91
+        height: 219
+      alignment: 9
+      pivot: {x: .00549450563, y: .230137035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DamagedGeneratorElectricity_2
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 10
+        width: 91
+        height: 215
+      alignment: 9
+      pivot: {x: .00549417036, y: .23441872}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DamagedGeneratorElectricity_3
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 10
+        width: 91
+        height: 217
+      alignment: 9
+      pivot: {x: .00549450563, y: .232258141}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DamagedGeneratorElectricity_4
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 10
+        width: 91
+        height: 211
+      alignment: 9
+      pivot: {x: .00549450563, y: .238862634}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DamagedGeneratorElectricity_5
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 10
+        width: 91
+        height: 200
+      alignment: 9
+      pivot: {x: .00549383461, y: .252000242}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DamagedGeneratorElectricity_6
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 11
+        width: 91
+        height: 212
+      alignment: 9
+      pivot: {x: .00549383461, y: .237735927}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DamagedGeneratorElectricity_7
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 11
+        width: 91
+        height: 214
+      alignment: 9
+      pivot: {x: .00549450563, y: .23551406}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

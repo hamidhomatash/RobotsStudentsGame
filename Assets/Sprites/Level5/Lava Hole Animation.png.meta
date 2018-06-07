@@ -1,0 +1,233 @@
+fileFormatVersion: 2
+guid: 0b6f2e45b67118f49bfd29b3e90a6270
+timeCreated: 1522921658
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Lava Hole Animation_0
+    21300002: Lava Hole Animation_1
+    21300004: Lava Hole Animation_2
+    21300006: Lava Hole Animation_3
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: -1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lava Hole Animation_0
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 563
+        width: 197
+        height: 276
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 98.5, y: 95}
+        - {x: 87.5, y: 138}
+        - {x: -86.5, y: 138}
+        - {x: -98.5, y: 132}
+        - {x: -98.5, y: -28}
+        - {x: -10.5, y: -138}
+        - {x: 5.5, y: -138}
+        - {x: 8.5, y: -134}
+        - {x: 9.5, y: -107}
+        - {x: 98.5, y: -13}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lava Hole Animation_1
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 572
+        width: 197
+        height: 267
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 76.5, y: 132.5}
+        - {x: -71.5, y: 132.5}
+        - {x: -98.5, y: 122.5}
+        - {x: -98.5, y: -32.5}
+        - {x: -21.5, y: -132.5}
+        - {x: 14.5, y: -132.5}
+        - {x: 98.5, y: -7.5}
+        - {x: 98.5, y: 70.5}
+        - {x: 94.5, y: 91.5}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lava Hole Animation_2
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 563
+        width: 197
+        height: 276
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -61.5, y: 138}
+        - {x: -98.5, y: 121}
+        - {x: -98.5, y: -21}
+        - {x: -46.5, y: -138}
+        - {x: 15.5, y: -138}
+        - {x: 98.5, y: -42}
+        - {x: 98.5, y: 90}
+        - {x: 71.5, y: 138}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lava Hole Animation_3
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 564
+        width: 197
+        height: 275
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 98.5, y: 92.5}
+        - {x: 55.5, y: 137.5}
+        - {x: -84.5, y: 137.5}
+        - {x: -98.5, y: 109.5}
+        - {x: -98.5, y: -59.5}
+        - {x: -7.5, y: -134.5}
+        - {x: -3.5, y: -137.5}
+        - {x: 6.5, y: -137.5}
+        - {x: 13.5, y: -129.5}
+        - {x: 87.5, y: -48.5}
+        - {x: 98.5, y: -19.5}
+      physicsShape: []
+      tessellationDetail: 0
+    outline:
+    - - {x: -696, y: 241}
+      - {x: -702, y: 286}
+      - {x: -755, y: 329}
+      - {x: -824, y: 329}
+      - {x: -844, y: 326}
+      - {x: -877, y: 301}
+      - {x: -897, y: 280}
+      - {x: -897, y: 183}
+      - {x: -896, y: 171}
+      - {x: -818, y: 103}
+      - {x: -803, y: 49}
+      - {x: -788, y: 49}
+      - {x: -778, y: 104}
+      - {x: -722, y: 150}
+      - {x: -696, y: 199}
+    - - {x: 204, y: 290}
+      - {x: 152, y: 329}
+      - {x: 55, y: 329}
+      - {x: 16, y: 306}
+      - {x: 3, y: 267}
+      - {x: 3, y: 181}
+      - {x: 69, y: 101}
+      - {x: 90, y: 49}
+      - {x: 112, y: 49}
+      - {x: 113, y: 50}
+      - {x: 118, y: 105}
+      - {x: 182, y: 147}
+      - {x: 204, y: 180}
+    - - {x: 654, y: 290}
+      - {x: 602, y: 329}
+      - {x: 505, y: 329}
+      - {x: 466, y: 306}
+      - {x: 453, y: 267}
+      - {x: 453, y: 179}
+      - {x: 473, y: 139}
+      - {x: 549, y: 50}
+      - {x: 564, y: 50}
+      - {x: 568, y: 60}
+      - {x: 628, y: 150}
+      - {x: 654, y: 182}
+    - - {x: -246, y: 244}
+      - {x: -251, y: 287}
+      - {x: -299, y: 329}
+      - {x: -368, y: 329}
+      - {x: -421, y: 316}
+      - {x: -447, y: 276}
+      - {x: -447, y: 167}
+      - {x: -371, y: 61}
+      - {x: -363, y: 60}
+      - {x: -346, y: 60}
+      - {x: -342, y: 63}
+      - {x: -284, y: 135}
+      - {x: -246, y: 199}
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

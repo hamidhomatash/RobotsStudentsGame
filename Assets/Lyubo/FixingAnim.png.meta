@@ -1,0 +1,683 @@
+fileFormatVersion: 2
+guid: 473efe2ab3c388943a210bb12db174c6
+timeCreated: 1511061763
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: FixingAnim_0
+    21300002: FixingAnim_1
+    21300004: FixingAnim_2
+    21300006: FixingAnim_3
+    21300008: FixingAnim_4
+    21300010: FixingAnim_5
+    21300012: FixingAnim_6
+    21300014: FixingAnim_7
+    21300016: FixingAnim_8
+    21300018: FixingAnim_9
+    21300020: FixingAnim_10
+    21300022: FixingAnim_11
+    21300024: FixingAnim_12
+    21300026: FixingAnim_13
+    21300028: FixingAnim_14
+    21300030: FixingAnim_15
+    21300032: FixingAnim_16
+    21300034: FixingAnim_17
+    21300036: FixingAnim_18
+    21300038: FixingAnim_19
+    21300040: FixingAnim_20
+    21300042: FixingAnim_21
+    21300044: FixingAnim_22
+    21300046: FixingAnim_23
+    21300048: FixingAnim_24
+    21300050: FixingAnim_25
+    21300052: FixingAnim_26
+    21300054: FixingAnim_27
+    21300056: FixingAnim_28
+    21300058: FixingAnim_29
+    21300060: FixingAnim_30
+    21300062: FixingAnim_31
+    21300064: FixingAnim_32
+    21300066: FixingAnim_33
+    21300068: FixingAnim_34
+    21300070: FixingAnim_35
+    21300072: FixingAnim_36
+    21300074: FixingAnim_37
+    21300076: FixingAnim_38
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 8192
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 8192
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 8192
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FixingAnim_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 494
+        width: 75
+        height: 72
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 494
+        width: 75
+        height: 70
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_2
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 494
+        width: 75
+        height: 68
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_3
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 494
+        width: 75
+        height: 66
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_4
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 494
+        width: 75
+        height: 63
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_5
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 494
+        width: 75
+        height: 61
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_6
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 494
+        width: 75
+        height: 61
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_7
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 494
+        width: 75
+        height: 61
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_8
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 494
+        width: 75
+        height: 61
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_9
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 494
+        width: 75
+        height: 61
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_10
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 494
+        width: 75
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_11
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 494
+        width: 75
+        height: 70
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_12
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 494
+        width: 75
+        height: 76
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_13
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 326
+        width: 75
+        height: 82
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_14
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 326
+        width: 75
+        height: 88
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_15
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 326
+        width: 75
+        height: 94
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_16
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 326
+        width: 75
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_17
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 326
+        width: 75
+        height: 106
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_18
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 326
+        width: 75
+        height: 112
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_19
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 326
+        width: 75
+        height: 104
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_20
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 326
+        width: 84
+        height: 93
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_21
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 326
+        width: 90
+        height: 83
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_22
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 326
+        width: 92
+        height: 66
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_23
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 326
+        width: 92
+        height: 72
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_24
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 326
+        width: 92
+        height: 78
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_25
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 326
+        width: 92
+        height: 84
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_26
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 165
+        width: 92
+        height: 90
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_27
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 165
+        width: 92
+        height: 95
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_28
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 165
+        width: 92
+        height: 102
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_29
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 165
+        width: 92
+        height: 106
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_30
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 165
+        width: 92
+        height: 109
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_31
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 165
+        width: 108
+        height: 101
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_32
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 165
+        width: 110
+        height: 96
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_33
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 165
+        width: 107
+        height: 82
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_34
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 165
+        width: 100
+        height: 72
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_35
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 165
+        width: 90
+        height: 63
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_36
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 165
+        width: 90
+        height: 63
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_37
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 73
+        width: 90
+        height: 63
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: FixingAnim_38
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 73
+        width: 90
+        height: 63
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

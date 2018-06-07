@@ -1,0 +1,121 @@
+fileFormatVersion: 2
+guid: 5040551a182c2e5408dc7e2d903fa972
+timeCreated: 1519135009
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: BurningFireAnim 1_0
+    21300002: BurningFireAnim 1_1
+    21300004: BurningFireAnim 1_2
+    21300006: BurningFireAnim 1_3
+    21300008: BurningFireAnim 1_4
+    21300010: BurningFireAnim 1_5
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: BurningFireAnim 1_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1
+        width: 89
+        height: 139
+      alignment: 9
+      pivot: {x: .50543344, y: .141668588}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BurningFireAnim 1_1
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 0
+        width: 86
+        height: 140
+      alignment: 9
+      pivot: {x: .46626246, y: .161498591}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BurningFireAnim 1_2
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 0
+        width: 85
+        height: 140
+      alignment: 9
+      pivot: {x: .431730926, y: .137319922}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BurningFireAnim 1_3
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 0
+        width: 96
+        height: 140
+      alignment: 9
+      pivot: {x: .424441665, y: .123503439}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BurningFireAnim 1_4
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 0
+        width: 95
+        height: 140
+      alignment: 9
+      pivot: {x: .489819348, y: .099324666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BurningFireAnim 1_5
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 0
+        width: 98
+        height: 140
+      alignment: 9
+      pivot: {x: .371705979, y: .123503439}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

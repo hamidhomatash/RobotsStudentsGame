@@ -1,0 +1,218 @@
+fileFormatVersion: 2
+guid: deb3e1a04464ec642a464548595490b6
+timeCreated: 1522724487
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Level1ProblemDamaged_0
+    21300002: Level1ProblemDamaged_1
+    21300004: Level1ProblemDamaged_2
+    21300006: Level1ProblemDamaged_3
+    21300008: Level1ProblemDamaged_4
+    21300010: Level1ProblemDamaged_5
+    21300012: Level1ProblemDamaged_6
+    21300014: Level1ProblemDamaged_7
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 8192
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 8192
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 8192
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Level1ProblemDamaged_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 39
+        width: 121
+        height: 201
+      alignment: 9
+      pivot: {x: 0.4767431, y: 0.042824265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Level1ProblemDamaged_1
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 42
+        width: 110
+        height: 199
+      alignment: 9
+      pivot: {x: 0.40637055, y: 0.02810874}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Level1ProblemDamaged_2
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 35
+        width: 107
+        height: 205
+      alignment: 9
+      pivot: {x: 0.43671823, y: 0.06150081}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Level1ProblemDamaged_3
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 36
+        width: 102
+        height: 201
+      alignment: 9
+      pivot: {x: 0.39916512, y: 0.057819672}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Level1ProblemDamaged_4
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 34
+        width: 121
+        height: 205
+      alignment: 9
+      pivot: {x: 0.47721773, y: 0.066377126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Level1ProblemDamaged_5
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 36
+        width: 115
+        height: 201
+      alignment: 9
+      pivot: {x: 0.42275336, y: 0.057749715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Level1ProblemDamaged_6
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 36
+        width: 110
+        height: 196
+      alignment: 9
+      pivot: {x: 0.44182462, y: 0.059368465}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Level1ProblemDamaged_7
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 34
+        width: 108
+        height: 196
+      alignment: 9
+      pivot: {x: 0.4039787, y: 0.06949874}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

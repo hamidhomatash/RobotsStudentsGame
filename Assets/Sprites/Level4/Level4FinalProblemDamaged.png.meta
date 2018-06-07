@@ -1,0 +1,143 @@
+fileFormatVersion: 2
+guid: d18751283a654b446ab68bb262af7644
+timeCreated: 1522284829
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Level4FinalProblemDamaged_0
+    21300002: Level4FinalProblemDamaged_1
+    21300004: Level4FinalProblemDamaged_2
+    21300006: Level4FinalProblemDamaged_3
+    21300008: Level4FinalProblemDamaged_4
+    21300010: Level4FinalProblemDamaged_5
+    21300012: Level4FinalProblemDamaged_6
+    21300014: Level4FinalProblemDamaged_7
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Level4FinalProblemDamaged_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 55
+        width: 119
+        height: 161
+      alignment: 9
+      pivot: {x: .147354349, y: .0463247821}
+      border: {x: 0, y: 0, z: 0, w: 1}
+    - name: Level4FinalProblemDamaged_1
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 54
+        width: 120
+        height: 195
+      alignment: 9
+      pivot: {x: .112624235, y: .0439992845}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Level4FinalProblemDamaged_2
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 53
+        width: 107
+        height: 191
+      alignment: 9
+      pivot: {x: .0792364702, y: .0500922278}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Level4FinalProblemDamaged_3
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 54
+        width: 101
+        height: 184
+      alignment: 9
+      pivot: {x: .0244744942, y: .0461011156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Level4FinalProblemDamaged_4
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 53
+        width: 110
+        height: 183
+      alignment: 9
+      pivot: {x: .0775579289, y: .0518646874}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Level4FinalProblemDamaged_5
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 55
+        width: 114
+        height: 185
+      alignment: 9
+      pivot: {x: .100954287, y: .0403134935}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Level4FinalProblemDamaged_6
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 53
+        width: 112
+        height: 172
+      alignment: 9
+      pivot: {x: .103027344, y: .0553260408}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Level4FinalProblemDamaged_7
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 56
+        width: 113
+        height: 188
+      alignment: 9
+      pivot: {x: .128697753, y: .0348264016}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

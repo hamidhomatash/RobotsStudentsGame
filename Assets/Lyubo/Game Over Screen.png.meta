@@ -1,0 +1,143 @@
+fileFormatVersion: 2
+guid: e10cace1a9c0ce3419a57281c8728068
+timeCreated: 1519321862
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Game Over Screen_0
+    21300002: Game Over Screen_1
+    21300004: Game Over Screen_2
+    21300006: Game Over Screen_3
+    21300008: Game Over Screen_4
+    21300010: Game Over Screen_5
+    21300012: Game Over Screen_6
+    21300014: Game Over Screen_7
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 8192
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Game Over Screen_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 483
+        width: 923
+        height: 478
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Game Over Screen_1
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 483
+        width: 922
+        height: 478
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Game Over Screen_2
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 483
+        width: 922
+        height: 478
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Game Over Screen_3
+      rect:
+        serializedVersion: 2
+        x: 2790
+        y: 483
+        width: 922
+        height: 478
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Game Over Screen_4
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 2
+        width: 923
+        height: 478
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Game Over Screen_5
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 2
+        width: 922
+        height: 478
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Game Over Screen_6
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 2
+        width: 922
+        height: 478
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Game Over Screen_7
+      rect:
+        serializedVersion: 2
+        x: 2790
+        y: 2
+        width: 922
+        height: 478
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
