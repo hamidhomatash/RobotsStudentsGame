@@ -19,6 +19,6 @@ public class TitleScreen : MonoBehaviour {
     IEnumerator Delay()
     {
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene("LevelSelection");
+        SceneManager.LoadScene("New Animation Start Lyubo Here If You Are Looking For It You Thud");
     }
 }
