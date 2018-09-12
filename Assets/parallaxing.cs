@@ -10,16 +10,12 @@ public class parallaxing : MonoBehaviour {
 
     private Transform cam;
     private Vector3 previousCamPos;
-
-    void Awake()
-    {
-        cam = Camera.main.transform;
-    }
-
+	
     // Use this for initialization
     void Start ()
     {
-        previousCamPos = cam.position;
+		cam = Camera.main.transform;
+		previousCamPos = cam.position;
 
         parallaxScales = new float[backgrounds.Length];
         for (int i = 0; i < backgrounds.Length; i++)

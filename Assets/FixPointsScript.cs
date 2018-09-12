@@ -1,31 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FixPointsScript : MonoBehaviour
 {
-    public GameObject Player;
-    public GameObject TheEnd;
-    public Gravity gravity;
-    public bool IsFixed = true;
+    public bool IsFixed = false;
 
-    void Start()
+	private void Start()
+	{
+		IsFixed = false;
+	}
+
+	public void SetFixed()
     {
-
-    }
-
-    void OnTriggerEnter2D(Collider2D collider)
-    {
-       if (collider.gameObject.tag == "Player")
-       {
-           StartCoroutine(Stop());
-           IsFixed = false;
-        }
-    }
-
-    IEnumerator Stop()
-    {
-        yield return new WaitForSeconds(1f);
-        TheEnd.GetComponent<BoxCollider2D>().enabled = false;
-    }
+		IsFixed = true;
+		GetComponent<BoxCollider2D>().enabled = false;
+	}
 }

@@ -1,26 +1,28 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnvHazard : MonoBehaviour {
-
-    bool turnOn = false;
+public class EnvHazard : MonoBehaviour
+{
     public GameObject Elec;
     public FixPointsScript fps;
      
 	// Use this for initialization
 	void Start ()
     {
-        StartCoroutine(Test());
+		if (Elec != null)
+		{
+			StartCoroutine(Test());
+		}
 	}
 
     void Update()
     {
-        if (fps.IsFixed == false)
+        if (Elec != null && fps != null && fps.IsFixed)
         {
             StopCoroutine(Test());
-            
-        }
+			fps = null;
+
+		}
     }
 
     IEnumerator Test()
@@ -29,7 +31,6 @@ public class EnvHazard : MonoBehaviour {
         {
             Elec.SetActive(true);
             yield return new WaitForSeconds(0.5f);
-            print(Time.time);
             Elec.SetActive(false);
             yield return new WaitForSeconds(0.5f);
         }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MovementScript : MonoBehaviour
@@ -14,13 +15,7 @@ public class MovementScript : MonoBehaviour
     public BoxCollider2D boxCol;
     public GameObject TheEnd;
     public GameObject Player;
-    public GameObject Final;
-    public GameObject Final1;
-    public GameObject Final2;
-    public GameObject Final3;
-    public GameObject Final4;
-
-
+	public GameObject BlockerObstacle;
 
     public AudioSource source;
     public AudioClip jumpSound;
@@ -41,56 +36,84 @@ public class MovementScript : MonoBehaviour
 
     Vector3 startPos;
 
-    public int Level1 = 0;
-    public int Level2 = 0;
-    public int Level3 = 0;
-    public int Level4 = 0;
-    public int Level5 = 0;
-
     public GameObject LevelText;
-    public GameObject Button1;
-    public GameObject Button2;
 
-    void Start()
+	[SerializeField] private Text objectiveText;
+
+	[SerializeField] private GameObject killZoneLeft;
+	[SerializeField] private GameObject killZoneRight;
+	[SerializeField] private GameObject killZoneTop;
+	[SerializeField] private GameObject killZoneBottom;
+
+	private bool levelComplete = false;
+	private int objectivesComplete = 0;
+	private int totalObjectives = 0;
+
+	void Start()
+	{
+		anim = this.GetComponent<Animator>();
+
+		if (gravity.enabled)
+		{
+			gravityEnabled = true;
+		}
+		else
+		{
+			gravityEnabled = false;
+		}
+
+		normal = true;
+		wall = false;
+		fixing = false;
+
+
+		startPos = this.transform.position;
+
+		//boxCol = theEnd.GetComponent<BoxCollider2D>();
+		source = GetComponent<AudioSource>();
+
+		if (BlockerObstacle != null)
+		{
+			BlockerObstacle.SetActive(true);
+		}
+
+		totalObjectives = GameObject.FindObjectsOfType<FixPointsScript>().Length;
+
+		LevelText.SetActive(false);
+	}
+
+	/// <summary>
+	/// There is a bug sometimes where the player can leave the level by falling through it. Therefore
+	/// to prevent the user from being stuck forever due to this killzone markers have been placed in the
+	/// levels and this funcion checks the player position against them to make sure to kill the player
+	/// if they go outwith the kill zone boundries
+	/// </summary>
+	private void CheckKillZones()
+	{
+		Vector3 position = transform.position;
+		if(	position.x <= killZoneLeft.transform.position.x || position.x >= killZoneRight.transform.position.x ||
+			position.y <= killZoneBottom.transform.position.y || position.y >= killZoneTop.transform.position.y)
+		{
+			StartCoroutine(DyingRespawn());
+		}
+	}
+
+    private void Update()
     {
-        anim = this.GetComponent<Animator>();
+		if (objectiveText != null)
+		{
+			objectiveText.text = objectivesComplete + " / " + totalObjectives;
+		}
 
-        if (gravity.enabled)
-        {
-            gravityEnabled = true;
-        }
-        else
-        {
-            gravityEnabled = false;
-        }
+		// Don't do anything if currently dying or the level is complete
+		if (death || levelComplete)
+		{
+			return;
+		}
 
-        normal = true;
-        wall = false;
-        fixing = false;
+		CheckKillZones();
 
-
-        startPos = this.transform.position;
-
-        //boxCol = theEnd.GetComponent<BoxCollider2D>();
-        source = GetComponent<AudioSource>();
-
-        LevelText.SetActive(false);
-        Button1.SetActive(false);
-        Button2.SetActive(false);
-
-        Final.SetActive(true);
-        Final1.SetActive(true);
-        Final2.SetActive(true);
-        Final3.SetActive(true);
-        Final4.SetActive(true);
-
-
-    }
-
-    void Update()
-    {
-
-        if (normal == true)
+		if (normal == true)
         {
             float axisX = Input.GetAxis("Horizontal");
             transform.Translate(new Vector3(axisX, 0) * Time.deltaTime * speed);
@@ -102,143 +125,100 @@ public class MovementScript : MonoBehaviour
             transform.Translate(new Vector3(0, axisY) * Time.deltaTime * speed);
         }
 
-        if (Input.GetButton("Horizontal") && fixing == false)
-        {
-            anim.SetInteger("CharacterStage", 1);
-        }
+		if (!fixing)
+		{
+			if (Input.GetButton("Horizontal"))
+			{
+				anim.SetInteger("CharacterStage", 1);
+			}
+			else if (!Input.GetButton("Horizontal"))
+			{
+				anim.SetInteger("CharacterStage", 0);
+			}
 
-        else if (!Input.GetButton("Horizontal") && fixing == false)
-        {
-            anim.SetInteger("CharacterStage", 0);
-        }
+			if (Input.GetButton("Vertical") && wall == true)
+			{
+				anim.SetInteger("CharacterStage", 1);
+			}
+			else if (!Input.GetButton("Vertical") && wall == true)
+			{
+				anim.SetInteger("CharacterStage", 0);
+			}
 
-        if (Input.GetButton("Vertical") && wall == true)
-        {
-            anim.SetInteger("CharacterStage", 1);
-        }
+			if (IsJumpButtonDown())
+			{
+				anim.SetInteger("CharacterStage", 2);
 
-        else if (!Input.GetButton("Vertical") && wall == true)
-        {
-            anim.SetInteger("CharacterStage", 0);
-        }
+				if (isGrounded == true)
+				{
+					//anim.SetInteger("CharacterStage", 0);
+					source.PlayOneShot(jumpSound, 0.5F);
+					GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jump);
+					isGrounded = false;
+					gravity.enabled = false;
+					gravityEnabled = false;
+					Physics2D.gravity = new Vector3(0f, -25f, 0f);
+				}
+			}
+		}
 
-        if (death == true)
-        {
-            anim.SetInteger("CharacterStage", 5);
-        }
+		CheckRemoveBlockerObstacle();
+		CheckLevelComplete();
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            anim.SetInteger("CharacterStage", 2);
-
-            if (isGrounded == true)
-            {
-                //anim.SetInteger("CharacterStage", 0);
-                source.PlayOneShot(jumpSound, 0.5F);
-                GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jump);
-                isGrounded = false;
-                gravity.enabled = false;
-                gravityEnabled = false;
-                Physics2D.gravity = new Vector3(0f, -25f, 0f);
-            }
-        }
-
-        if (Level1 == 2)
-        {
-            Final.SetActive(false);
-        }
-
-            if (Level1 >= 3)
-            {
-                if (SceneManager.GetActiveScene().name == "Lolz")
-                {
-                    LevelText.SetActive(true);
-                    Button1.SetActive(true);
-                    Button2.SetActive(true);
-                }
-            }
-        
-
-        if (Level2 == 2)
-        {
-            Final1.SetActive(false);
-        }
-
-            if (Level2 >= 3)
-            {
-                if (SceneManager.GetActiveScene().name == "MediumDifficultyLevel")
-                {
-                    LevelText.SetActive(true);
-                    Button1.SetActive(true);
-                    Button2.SetActive(true);
-                }
-            }
-        
-
-
-        if (Level3 == 5)
-        {
-            Final2.SetActive(false);
-        }
-
-            if (Level3 >= 6)
-            {
-                if (SceneManager.GetActiveScene().name == "Level1")
-                {
-                    LevelText.SetActive(true);
-                    Button1.SetActive(true);
-                    Button2.SetActive(true);
-                }
-            }
-        
-
-        if (Level4 == 3)
-        {
-            Final3.SetActive(false);
-        }
-
-            if (Level4 >= 4)
-            {
-                if (SceneManager.GetActiveScene().name == "Level 4")
-                {
-                    LevelText.SetActive(true);
-                    Button1.SetActive(true);
-                    Button2.SetActive(true);
-                }
-            }
-
-
-        //if (Level5 == 2)
-        //{
-        //    Final4.SetActive(false);
-        //}
-
-        if (Level5 >= 4)
-        {
-            if (SceneManager.GetActiveScene().name == "Level 5 - With Background")
-            {
-                LevelText.SetActive(true);
-                Button1.SetActive(true);
-                Button2.SetActive(true);
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.Escape))
+		if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene("LevelSelection");
         }
-
     }
+	
 
-    void OnTriggerEnter2D(Collider2D collider)
+	private void CheckRemoveBlockerObstacle()
+	{
+		if (objectivesComplete == totalObjectives - 1 && BlockerObstacle != null)
+		{
+			BlockerObstacle.SetActive(false);
+		}
+	}
+	private void CheckLevelComplete()
+	{
+		if(!levelComplete)
+		{
+			if(objectivesComplete >= totalObjectives)
+			{
+				levelComplete = true;
+				LevelText.SetActive(true);
+
+				StartCoroutine(LevelCompleteSequence());
+			}
+		}
+	}
+
+	IEnumerator LevelCompleteSequence()
+	{
+		yield return new WaitForSeconds(4.0f);
+
+		// If game not complete yet go to next level
+		if (Singleton.Instance.completedLevels < LevelSelectScript.totalLevels)
+		{
+			++Singleton.Instance.completedLevels;
+			++Singleton.Instance.currentLevelIndex;
+		}
+
+		// Otherwise load the level select screen
+		SceneManager.LoadScene("LevelSelection");
+	}
+
+	void OnTriggerEnter2D(Collider2D collider)
     {
+		// Don't do anything if currently dying or the level is complete
+		if (death || levelComplete)
+		{
+			return;
+		}
 
-        if (collider.gameObject.tag == "Respawn")
+		if (collider.gameObject.tag == "Respawn")
         {
             StartCoroutine(DyingRespawn());
-            //yield return WaitForSeconds(1);
-            //source.PlayOneShot(deathSound, 1F);
-            //this.transform.position = startPos;
         }
         if (collider.gameObject.tag == "Collect")
         {
@@ -251,11 +231,9 @@ public class MovementScript : MonoBehaviour
             isGrounded = true;
         }
 
-        if (collider.gameObject.tag == "EndAnims")
+        if (collider.gameObject.tag == "EndAnims" && !fixing)
         {
-            StartCoroutine(Wait());
-            fixing = true;
-            anim.SetInteger("CharacterStage", 4);
+            StartCoroutine(SetObjectiveComplete(collider.gameObject));
         }
 
         if (collider.gameObject.tag == "SlowDown")
@@ -264,53 +242,68 @@ public class MovementScript : MonoBehaviour
         }
     }
 
-    IEnumerator Wait()
+    IEnumerator SetObjectiveComplete(GameObject objectiveGameObject)
     {
-        source.PlayOneShot(fixSound, 1F);
+		++objectivesComplete;
+		fixing = true;
+		anim.SetInteger("CharacterStage", 4);
+
+		source.PlayOneShot(fixSound, 1F);
         isGrounded = false;
         normal = false;
+
+		AnimFixing animFixing = objectiveGameObject.GetComponent<AnimFixing>();
+		if(animFixing != null)
+		{
+			StartCoroutine(animFixing.PlayAnimation());
+		}
+
         yield return new WaitForSeconds(2.5f);
-        Level1++;
-        Level2++;
-        Level3++;
-        Level4++;
-        Level5++;
+		
         source.PlayOneShot(smokeSound, 1f);
         normal = true;
         isGrounded = true;
+		fixing = false;
+
+		FixPointsScript fixPointsScript = objectiveGameObject.GetComponent<FixPointsScript>();
+		if(fixPointsScript != null)
+		{
+			fixPointsScript.SetFixed();
+		}
     }
 
     IEnumerator DyingRespawn()
     {
         source.PlayOneShot(deathSound, 1F);
-        normal = false;
+		anim.SetInteger("CharacterStage", 5);
+		normal = false;
         wall = false;
         death = true;
-        yield return new WaitForSeconds(0.5f);
-        death = false;
-        this.transform.position = startPos;
-        normal = true;
-        wall = true;
-    }
+        yield return new WaitForSeconds(1.0f);
+		death = false;
+		normal = true;
+		transform.position = startPos;
+		anim.SetInteger("CharacterStage", 0);
+	}
 
 
     void OnTriggerStay2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "MagnetRoof")
+		// Don't do anything if currently dying or the level is complete
+		if (death || levelComplete)
+		{
+			return;
+		}
+
+		if (collider.gameObject.tag == "MagnetRoof")
         {
-            if (Input.GetKeyDown("o"))
+            if (IsMagnetButtonDown())
             {
                 anim.SetInteger("CharacterStage", 3);
                 gravity.enabled = true;
                 gravityEnabled = true;
                 source.PlayOneShot(magnetSound, 0.3F);
                 isGrounded = true;
-            }
-            else if (Input.GetKeyDown("p"))
-            {
-                gravity.enabled = false;
-                gravityEnabled = false;
-                Physics2D.gravity = new Vector3(0f, -25f, 0f);
             }
             if (gravity.enabled == true && gravityEnabled == true)
             {
@@ -321,19 +314,13 @@ public class MovementScript : MonoBehaviour
 
         if (collider.gameObject.tag == "MagnetWallR")
         {
-            if (Input.GetKeyDown("o"))
-            {
+			if (IsMagnetButtonDown())
+			{
                 anim.SetInteger("CharacterStage", 3);
                 gravity.enabled = true;
                 gravityEnabled = true;
                 source.PlayOneShot(magnetSound, 0.3F);
                 isGrounded = true;
-            }
-            else if (Input.GetKeyDown("p"))
-            {
-                gravity.enabled = false;
-                gravityEnabled = false;
-                Physics2D.gravity = new Vector3(0f, -25f, 0f);
             }
             if (gravity.enabled == true && gravityEnabled == true)
             {
@@ -349,19 +336,13 @@ public class MovementScript : MonoBehaviour
 
         if (collider.gameObject.tag == "MagnetWallL")
         {
-            if (Input.GetKeyDown("o"))
+            if (IsMagnetButtonDown())
             {
                 anim.SetInteger("CharacterStage", 3);
                 gravity.enabled = true;
                 gravityEnabled = true;
                 source.PlayOneShot(magnetSound, 0.3F);
                 isGrounded = true;
-            }
-            else if (Input.GetKeyDown("p"))
-            {
-                gravity.enabled = false;
-                gravityEnabled = false;
-                Physics2D.gravity = new Vector3(0f, -25f, 0f);
             }
             if (gravity.enabled == true && gravityEnabled == true)
             {
@@ -382,7 +363,7 @@ public class MovementScript : MonoBehaviour
 
         if (collider.gameObject.tag == "MagnetPushLow")
         {
-            if (Input.GetKeyDown("o"))
+            if (IsMagnetButtonDown())
             {
                 anim.SetInteger("CharacterStage", 3);
                 gravity.enabled = true;
@@ -390,12 +371,6 @@ public class MovementScript : MonoBehaviour
                 source.PlayOneShot(magnetSound, 0.3F);
                 isGrounded = true;
 
-            }
-            else if (Input.GetKeyDown("p"))
-            {
-                gravity.enabled = false;
-                gravityEnabled = false;
-                Physics2D.gravity = new Vector3(0f, -25f, 0f);
             }
             if (gravity.enabled == true && gravityEnabled == true)
             {
@@ -406,19 +381,13 @@ public class MovementScript : MonoBehaviour
 
         if (collider.gameObject.tag == "MagnetPushRight")
         {
-            if (Input.GetKeyDown("o"))
+            if (IsMagnetButtonDown())
             {
                 anim.SetInteger("CharacterStage", 3);
                 gravity.enabled = true;
                 gravityEnabled = true;
                 source.PlayOneShot(magnetSound, 0.3f);
                 isGrounded = true;
-            }
-            else if (Input.GetKeyDown("p"))
-            {
-                gravity.enabled = false;
-                gravityEnabled = false;
-                Physics2D.gravity = new Vector3(0f, -25f, 0f);
             }
             if (gravity.enabled == true && gravityEnabled == true)
             {
@@ -429,19 +398,13 @@ public class MovementScript : MonoBehaviour
 
         if (collider.gameObject.tag == "MagnetPushLeft")
         {
-            if (Input.GetKeyDown("o"))
+            if (IsMagnetButtonDown())
             {
                 anim.SetInteger("CharacterStage", 3);
                 gravity.enabled = true;
                 gravityEnabled = true;
                 source.PlayOneShot(magnetSound, 0.3F);
                 isGrounded = true;
-            }
-            else if (Input.GetKeyDown("p"))
-            {
-                gravity.enabled = false;
-                gravityEnabled = false;
-                Physics2D.gravity = new Vector3(0f, -25f, 0f);
             }
             if (gravity.enabled == true && gravityEnabled == true)
             {
@@ -452,7 +415,7 @@ public class MovementScript : MonoBehaviour
 
         if (collider.gameObject.tag == "MagnetPushLeftDia")
         {
-            if (Input.GetKeyDown("o"))
+            if (IsMagnetButtonDown())
             {
                 anim.SetInteger("CharacterStage", 3);
                 gravity.enabled = true;
@@ -470,7 +433,7 @@ public class MovementScript : MonoBehaviour
 
         if (collider.gameObject.tag == "MagnetPushRightDia")
         {
-            if (Input.GetKeyDown("o"))
+            if (IsMagnetButtonDown())
             {
                 anim.SetInteger("CharacterStage", 3);
                 gravity.enabled = true;
@@ -488,9 +451,15 @@ public class MovementScript : MonoBehaviour
 
     }
 
-    void OnTriggerExit2D(Collider2D collider)
+	void OnTriggerExit2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "MagnetWallR")
+		// Don't do anything if currently dying or the level is complete
+		if (death || levelComplete)
+		{
+			return;
+		}
+
+		if (collider.gameObject.tag == "MagnetWallR")
         {
             normal = true;
             wall = false;
@@ -500,10 +469,28 @@ public class MovementScript : MonoBehaviour
             normal = true;
             wall = true;
         }
-
-        if (collider.gameObject.tag == "EndAnims")
-        {
-            fixing = false;
-        }
     }
+
+	private bool IsMagnetButtonDown()
+	{
+		return Input.GetKeyDown(KeyCode.M) ||
+			Input.GetKeyDown(KeyCode.O) ||
+			Input.GetKeyDown(KeyCode.Return) ||
+			Input.GetKeyDown(KeyCode.LeftAlt) ||
+			Input.GetKeyDown(KeyCode.Keypad5);
+	}
+
+	private bool IsJumpButtonDown()
+	{
+		return Input.GetKeyDown(KeyCode.Space) ||
+			Input.GetKeyDown(KeyCode.P) ||
+			Input.GetKeyDown(KeyCode.Return) ||
+			Input.GetKeyDown(KeyCode.Keypad0) ||
+			Input.GetKeyDown(KeyCode.KeypadPeriod) ||
+			Input.GetKeyDown(KeyCode.KeypadEnter) ||
+			Input.GetKeyDown(KeyCode.KeypadPlus) ||
+			Input.GetKeyDown(KeyCode.KeypadMinus) ||
+			Input.GetKeyDown(KeyCode.KeypadMultiply) ||
+			Input.GetKeyDown(KeyCode.KeypadDivide);
+	}
 }

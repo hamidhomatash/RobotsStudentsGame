@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AnimFixing : MonoBehaviour
@@ -33,79 +32,76 @@ public class AnimFixing : MonoBehaviour
     public GameObject fan23;
     public GameObject fan24;
 
-
-    Animator anims;
-    Animator anim;
-    GameObject stuff;
-
-    // Use this for initialization
-    void Start()
-    {
-        anim = this.GetComponent<Animator>();
-      
-    }
-
-
-    void OnTriggerEnter2D(Collider2D collider)
-    {
-        if (collider.gameObject.tag == "Player")
-        { 
-            StartCoroutine(Whatever());
-         }
-    }
-
-    IEnumerator Whatever()
+    public IEnumerator PlayAnimation()
     {
         yield return new WaitForSeconds(2f);
-        anim.SetInteger("Stages", 1);
-        yield return new WaitForSeconds(0.5f);
-        anim.SetInteger("Stages", 2);
-        fan99.gameObject.GetComponent<Animator>().enabled = true;
-        fan98.gameObject.GetComponent<Animator>().enabled = true;
-        fan97.gameObject.GetComponent<Animator>().enabled = true;
-        fan96.gameObject.GetComponent<Animator>().enabled = true;
-        fan1.gameObject.GetComponent<Animator>().enabled = true;
-        fan2.gameObject.GetComponent<Animator>().enabled = true;
-        fan3.gameObject.GetComponent<Animator>().enabled = true;
-        fan4.gameObject.GetComponent<Animator>().enabled = true;
-        fan5.gameObject.GetComponent<Animator>().enabled = true;
-        fan6.gameObject.GetComponent<Animator>().enabled = true;
-        fan7.gameObject.GetComponent<Animator>().enabled = true;
-        fan8.gameObject.GetComponent<Animator>().enabled = true;
-        fan9.gameObject.GetComponent<Animator>().enabled = true;
-        fan10.gameObject.GetComponent<Animator>().enabled = true;
-        fan10.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        fan11.gameObject.GetComponent<Animator>().enabled = true;
-        fan11.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        fan12.gameObject.GetComponent<Animator>().enabled = true;
-        fan12.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        fan13.gameObject.GetComponent<Animator>().enabled = true;
-        fan13.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        fan14.gameObject.GetComponent<Animator>().enabled = true;
-        fan14.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        fan15.gameObject.GetComponent<Animator>().enabled = true;
-        fan15.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        fan16.gameObject.GetComponent<Animator>().enabled = true;
-        fan16.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        fan17.gameObject.GetComponent<Animator>().enabled = true;
-        fan17.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        fan18.gameObject.GetComponent<Animator>().enabled = true;
-        fan18.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        fan19.gameObject.GetComponent<Animator>().enabled = true;
-        fan19.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        fan20.gameObject.GetComponent<Animator>().enabled = true;
-        fan20.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        fan21.gameObject.GetComponent<Animator>().enabled = true;
-        fan21.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        fan22.gameObject.GetComponent<Animator>().enabled = true;
-        fan22.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        fan23.gameObject.GetComponent<Animator>().enabled = true;
-        fan23.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        fan24.gameObject.GetComponent<Animator>().enabled = true;
-        fan24.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-    }
 
-    
+		Animator anim = GetComponent<Animator>();
+		anim.SetInteger("Stages", 1);
+
+		yield return new WaitForSeconds(0.5f);
+		anim.SetInteger("Stages", 2);
+
+		EnableFan(fan99, false);
+		EnableFan(fan98, false);
+		EnableFan(fan97, false);
+		EnableFan(fan96, false);
+		EnableFan(fan1, false);
+		EnableFan(fan2, false);
+		EnableFan(fan3, false);
+		EnableFan(fan4, false);
+		EnableFan(fan5, false);
+		EnableFan(fan6, false);
+		EnableFan(fan7, false);
+		EnableFan(fan8, false);
+		EnableFan(fan9, false);
+
+		EnableFan(fan10, true);
+		EnableFan(fan11, true);
+		EnableFan(fan12, true);
+		EnableFan(fan13, true);
+		EnableFan(fan14, true);
+		EnableFan(fan15, true);
+		EnableFan(fan16, true);
+		EnableFan(fan17, true);
+		EnableFan(fan18, true);
+		EnableFan(fan19, true);
+		EnableFan(fan20, true);
+		EnableFan(fan21, true);
+		EnableFan(fan22, true);
+		EnableFan(fan23, true);
+		EnableFan(fan24, true);
+
+		//yield return new WaitForSeconds(0.5f);
+
+		//Animator animator = GetComponent<Animator>();
+		//if (animator != null)
+		//{
+		//	if (animator.GetCurrentAnimatorStateInfo(0).IsName("level2fixed"))
+		//	{
+
+		//	}
+		//	anim.SetInteger("Stages", 2);
+		//	//animator.Play("level2fixed");
+		//}
+
+
+	}
+
+	private void EnableFan(GameObject fan, bool hasSpriteRenderer)
+	{
+		if(fan == null)
+		{
+			return;
+		}
+
+		fan.gameObject.GetComponent<Animator>().enabled = true;
+
+		if(hasSpriteRenderer)
+		{
+			fan.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+		}
+	}
 }
 
 
