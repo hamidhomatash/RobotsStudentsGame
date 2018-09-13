@@ -2,8 +2,8 @@
 
 public class Singleton : MonoBehaviour
 {
-	public int currentLevelIndex = 0;
-	public int completedLevels = 0;
+	public int currentLevelIndex = 5;
+	public int completedLevels = 5;
 
 	public static Singleton Instance
 	{

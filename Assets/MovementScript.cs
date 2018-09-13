@@ -202,6 +202,13 @@ public class MovementScript : MonoBehaviour
 		{
 			++Singleton.Instance.completedLevels;
 			++Singleton.Instance.currentLevelIndex;
+
+			// If final level complete then go to final scene but only when it has just happened and not on subsequent replays
+			if(Singleton.Instance.completedLevels >= LevelSelectScript.totalLevels)
+			{
+				SceneManager.LoadScene("Outro");
+				yield break;
+			}
 		}
 
 		// Otherwise load the level select screen
