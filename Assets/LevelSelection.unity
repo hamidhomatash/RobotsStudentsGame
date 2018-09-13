@@ -1438,9 +1438,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'A
-
-'
+  m_Text: D
 --- !u!222 &838319870
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2447,7 +2445,7 @@ GameObject:
   - component: {fileID: 1653175892}
   - component: {fileID: 1653175891}
   m_Layer: 5
-  m_Name: A
+  m_Name: D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
