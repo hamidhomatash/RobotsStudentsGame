@@ -27,7 +27,7 @@ public class LevelSelectScript : MonoBehaviour
 
 
 	/// <summary>This is a magic number taken from moving the arm off screen in the inspector</summary>
-	private float offscreenX = 1200.0f;
+	private float offscreenX = 1325.0f;
 
 	private Vector3 startPosition;
 	private Vector3 endPosition;
@@ -139,11 +139,11 @@ public class LevelSelectScript : MonoBehaviour
 				if (playerRobot.simulated)
 				{
 					Vector3 localPosition = playerRobot.transform.localPosition;
-					if (localPosition.y <= -3.5f)
+					if (localPosition.y <= -5.0f)
 					{
 						playerRobot.simulated = false;
 
-						localPosition.y = -3.5f;
+						localPosition.y = -5.0f;
 						playerRobot.transform.localPosition = localPosition;
 						LoadLevel(Singleton.Instance.completedLevels);
 					}
